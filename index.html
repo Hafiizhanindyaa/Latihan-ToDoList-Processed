@@ -5,23 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ToDoListApp</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css">
 </head>
 <body>
-    <div class="container">
+    <div class="app-screen">
+
         <header>
-            <h1>My Tasks</h1>
+            <i class="ri-menu-line icon"></i> <div class="header-right">
+                <i class="ri-search-line icon"></i> <i class="ri-filter-3-line icon"></i> </div>
         </header>
 
-        <main>
-            <form id="todo-form">
-                <input type="text"  id="todo-input" placeholder="Mau ngapain hari ini?" autocomplete="off" required>
-                <button type="submit" class="btn-add">Tambah</button>
-            </form>
+        <div class="tags-container">
+            <span class="tag active">all</span>
+            <span class="tag">job</span>
+            <span class="tag">wishlist</span>
+            <span class="tag">+</span>
+        </div>
 
-            <ul id="todo-list">
+        <div class="area"></div>
 
-            </ul>
-        </main>
+        <button class="fab-add" onclick="addTask()">
+            <i class="ri-add-line"></i>
+        </button>
+
+        <nav class="bottom-nav">
+            <i class="ri-clipboard-line active"></i>
+            <i class="ri-calendar-line"></i>
+            <i class="ri-user-line"></i>
+        </nav>
+        
     </div>
 </body>
 </html>
