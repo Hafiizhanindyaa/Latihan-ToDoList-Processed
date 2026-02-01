@@ -6,6 +6,7 @@
     <title>ToDoListApp</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css">
+    <script src="script.js"></script>
 </head>
 <body>
     <div class="app-screen">
@@ -34,6 +35,16 @@
             <i class="ri-user-line"></i>
         </nav>
         
+        <div id="overlay" class="overlay"></div>
+
+        <div id="todo-modal" class="todo-modal">
+            <h3>Tambah Tugas Baru</h3>
+            <input type="text" id="input-tugas" placeholder="Apa yang ingin kamu kerjakan?">
+            <div class="modal-button">
+                <button class="btn-cancel" onclick="closeTask()">Batal</button>
+                <button class="btn-save" onclick="saveTask()">Simpan</button>
+            </div>
+        </div>
     </div>
 </body>
 </html>

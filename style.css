@@ -79,3 +79,102 @@ header {
     align-items: center;
     font-size: 24px;
 }
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 99;
+    display: none;
+    transition: 0.3s;
+}
+
+.todo-modal {
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    background: #1a2a44;
+    padding: 30px 20px;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    z-index: 100;
+    transition: 0.4 ease-out;
+    color: white;
+}
+
+.overlay.active {
+    display: block;
+}
+
+.todo-modal.active {
+    bottom: 0;
+}
+
+.todo-modal input {
+    width: 250px;
+    padding: 12px;
+    margin: 20px 0;
+    border-radius: 10px;
+    border: none;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    outline: none;
+}
+
+.modal-button {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-save, .btn-cancel {
+    flex: 1;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-save { background: #B185DB; color: white; }
+.btn-cancel { background: transparent; color: #aaa; }
+
+.area {
+    padding: 20px;
+    overflow-y: auto;
+    height: 100%;
+    padding-bottom: 100px;
+}
+
+.todo-item {
+   background: rgba(177, 133, 219, 0.85); 
+   backdrop-filter: blur(5px);
+   color: white;
+   padding: 15px;
+   margin-bottom: 10px;
+   border-radius: 12px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+   animation: muncul 0.3s ease-in-out;
+}
+
+.todo-item i {
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.7);
+    transition: 0.2s;
+}
+
+.todo-item i:hover {
+    color: white;
+}
+
+@keyframes muncul {
+    from { opacity: 0; transform: transalateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
