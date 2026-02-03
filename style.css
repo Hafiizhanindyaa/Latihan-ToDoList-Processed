@@ -161,6 +161,8 @@ header {
    align-items: center;
    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
    animation: muncul 0.3s ease-in-out;
+   cursor: pointer;
+   user-select: none;
 }
 
 .todo-item i {
@@ -175,6 +177,12 @@ header {
 }
 
 @keyframes muncul {
-    from { opacity: 0; transform: transalateY(10px); }
+    from { opacity: 0; transform: translateY(10px); }
     to { opacity: 1; transform: translateY(0); }
+}
+
+.todo-item.completed {
+    background: rgba(177, 133, 219, 0.4);
+    text-decoration: line-through;
+    opacity: 0.8;
 }
